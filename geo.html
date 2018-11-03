@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Geolocation</title>
+</head>
+<body>
+  <h1>Where are you?</h1>
+
+  <script>
+    navigator.geolocation.getCurrentPosition(function(position) {
+      console.log(position);
+      let lat = position.coords.latitude;
+      let lon = position.coords.longitude;
+        console.log(`You are located at ${lat} latitude and ${lon} longitude.`)
+    });
+  </script>
+
+</body>
+</html>
