@@ -3,18 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Geolocation</title>
+  <link rel="stylesheet" href="geo.css">
 </head>
 <body>
   <h1>Where are you?</h1>
-
-  <script>
-    navigator.geolocation.getCurrentPosition(function(position) {
-      console.log(position);
-      let lat = position.coords.latitude;
-      let lon = position.coords.longitude;
-        console.log(`You are located at ${lat} latitude and ${lon} longitude.`)
-    });
-  </script>
+  <button type="button" name="button" id="findLocation">Find My Location</button>
+  <div class="cool">The Latitude is:<div id="lat"></div></div>
+  <div class="hot">The Longitude is:<div id="lon"></div></div>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="geo.js"></script>
 
 </body>
 </html>
